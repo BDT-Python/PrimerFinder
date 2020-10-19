@@ -1,0 +1,113 @@
+Index: Primers.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print('Enter your sequence: ')\r\nseq = input(gcggcgcgcc tgggcgctaa gatggcggcg gcgtgagttg catgttgtgt gaggatcccg\r\ngggccgccgc gtcgctcggg ccccgcc atg gccgtcacca tcacgctcaa aacgctgcag\r\ncagcagacct tcaagatccg catggagcct gacgagacgg tgaaggtgct aaaggagaag\r\natagaagctg agaagggtcg tgatgccttc cccgtggctg gacagaaact catctatgcc\r\nggcaagatct tgagtgacga tgtccctatc agggactatc gcatcgatga gaagaacttt\r\ngtggtcgtca tggtgaccaa gaccaaagcc ggccagggta cctcagcacc cccagaggcctcacccacag ctgccccaga gtcctctaca tccttcccgc ctgcccccac ctcaggcatg\r\ntcccatcccc cacctgccgc cagagaggac aagagcccat cagaggaatc cgcccccacg\r\n    acgtccccag agtctgtgtc aggctctgtt ccctcttcag gtagcagcgg gcgagaggaa\r\n    gacgcggcct ccacgctagt gacgggctct gagtatgaga cgatgctgac ggagatcatg\r\n    tccatgggct atgagcgaga gcgggtcgtg gccgccctga gagccagcta caacaacccc\r\n    caccgagccg tggagtatct gctcacggga attcctggga gccccgagcc ggaacacggt\r\n     tctgtccagg agagccaggt atcggagcag ccggccacgg aagcagcagg agagaacccc\r\n    ctggagttcc tgcgggacca gccccagttc cagaacatgc ggcaggtgat tcagcagaac\r\n    cctgcgctgc tgcccgccct gctccagcag ctgggccagg agaaccctca gcttttacag\r\n    caaatcagcc ggcaccagga gcagttcatc cagatgctga acgagccccc tggggagctg\r\n    gcggacatct cagatgtgga gggggaggtg ggcgccatag gagaggaggc cccgcagatg\r\n    aactacatcc aggtgacgcc gcaggagaaa gaagctatag agaggttgaa ggccctgggc\r\n    ttcccagaga gcctggtcat ccaggcctat ttcgcgtgtg aaaaaaatga gaacttggct\r\n    gccaacttcc tcctgagtca gaactttgat gacgagtgat gccaggaagc caggccaccg\r\n    aagcccccac cctaccctta ttccatgaaa gttttataaa agaaaaaata tatatatatt\r\n    catgtttatt taagaaatgg aaaaaaaaat caaaaatctt aaaaaaacaa gcaaacagtc\r\n    cagcttcctg tcctcctaaa gtggcccctg ttcccatctc ccgggccaga cagctgtccc\r\n    cccgtcctcc tccccagccc agcctgctca gagaagctgg caggactggg aggcgacaga\r\n     tgggcccctc ttggcctctg tcccagctct ctgcagccag acggaaaggc ggctgcttgc\r\n     ctctccatcc tccgaaaaac ccctgaggac ccccccccat cctcttctag gatgagggga\r\n     agctggagcc ccaactttga tcctccattg gagtggccca aatctttcca tctagggcaa\r\n     gtcctgaaag gcccaaggcc ccctccccag tctggccttg gcctccagcc tggagaaggg\r\n     ctaacatcag ctcattgtca aggccacccc caccccagaa cagaaccgtg tctctgataa\r\n     aggttttgaa gtgaataaag ttttaaaaac ta)\r\n\r\nprint('How many nucleotides should the primer be?')\r\nlength = input()\r\n\r\nprint(seq + ' ' + length)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Primers.py	(revision 56ad11f6ba217a176368e8ab06ae0446a5c00d34)
++++ Primers.py	(date 1603114477611)
+@@ -1,35 +1,3 @@
+-print('Enter your sequence: ')
+-seq = input(gcggcgcgcc tgggcgctaa gatggcggcg gcgtgagttg catgttgtgt gaggatcccg
+-gggccgccgc gtcgctcggg ccccgcc atg gccgtcacca tcacgctcaa aacgctgcag
+-cagcagacct tcaagatccg catggagcct gacgagacgg tgaaggtgct aaaggagaag
+-atagaagctg agaagggtcg tgatgccttc cccgtggctg gacagaaact catctatgcc
+-ggcaagatct tgagtgacga tgtccctatc agggactatc gcatcgatga gaagaacttt
+-gtggtcgtca tggtgaccaa gaccaaagcc ggccagggta cctcagcacc cccagaggcctcacccacag ctgccccaga gtcctctaca tccttcccgc ctgcccccac ctcaggcatg
+-tcccatcccc cacctgccgc cagagaggac aagagcccat cagaggaatc cgcccccacg
+-    acgtccccag agtctgtgtc aggctctgtt ccctcttcag gtagcagcgg gcgagaggaa
+-    gacgcggcct ccacgctagt gacgggctct gagtatgaga cgatgctgac ggagatcatg
+-    tccatgggct atgagcgaga gcgggtcgtg gccgccctga gagccagcta caacaacccc
+-    caccgagccg tggagtatct gctcacggga attcctggga gccccgagcc ggaacacggt
+-     tctgtccagg agagccaggt atcggagcag ccggccacgg aagcagcagg agagaacccc
+-    ctggagttcc tgcgggacca gccccagttc cagaacatgc ggcaggtgat tcagcagaac
+-    cctgcgctgc tgcccgccct gctccagcag ctgggccagg agaaccctca gcttttacag
+-    caaatcagcc ggcaccagga gcagttcatc cagatgctga acgagccccc tggggagctg
+-    gcggacatct cagatgtgga gggggaggtg ggcgccatag gagaggaggc cccgcagatg
+-    aactacatcc aggtgacgcc gcaggagaaa gaagctatag agaggttgaa ggccctgggc
+-    ttcccagaga gcctggtcat ccaggcctat ttcgcgtgtg aaaaaaatga gaacttggct
+-    gccaacttcc tcctgagtca gaactttgat gacgagtgat gccaggaagc caggccaccg
+-    aagcccccac cctaccctta ttccatgaaa gttttataaa agaaaaaata tatatatatt
+-    catgtttatt taagaaatgg aaaaaaaaat caaaaatctt aaaaaaacaa gcaaacagtc
+-    cagcttcctg tcctcctaaa gtggcccctg ttcccatctc ccgggccaga cagctgtccc
+-    cccgtcctcc tccccagccc agcctgctca gagaagctgg caggactggg aggcgacaga
+-     tgggcccctc ttggcctctg tcccagctct ctgcagccag acggaaaggc ggctgcttgc
+-     ctctccatcc tccgaaaaac ccctgaggac ccccccccat cctcttctag gatgagggga
+-     agctggagcc ccaactttga tcctccattg gagtggccca aatctttcca tctagggcaa
+-     gtcctgaaag gcccaaggcc ccctccccag tctggccttg gcctccagcc tggagaaggg
+-     ctaacatcag ctcattgtca aggccacccc caccccagaa cagaaccgtg tctctgataa
+-     aggttttgaa gtgaataaag ttttaaaaac ta)
+-
+-print('How many nucleotides should the primer be?')
+-length = input()
+-
+-print(seq + ' ' + length)
++seq = "gcggcgcgcc tgggcgctaa gatggcggcg gcgtgagttg catgttgtgt gaggatcccggggccgccgc gtcgctcggg ccccgcc atg gccgtcacca tcacgctcaa aacgctgcagcagcagacct tcaagatccg catggagcct gacgagacgg tgaaggtgct aaaggagaagatagaagctg agaagggtcg tgatgccttc cccgtggctg gacagaaact catctatgccggcaagatct tgagtgacga tgtccctatc agggactatc gcatcgatga gaagaactttgtggtcgtca tggtgaccaa gaccaaagcc ggccagggta cctcagcacc cccagaggcctcacccacag ctgccccaga gtcctctaca tccttcccgc ctgcccccac ctcaggcatgtcccatcccc cacctgccgc cagagaggac aagagcccat cagaggaatc cgcccccacgacgtccccag agtctgtgtc aggctctgtt ccctcttcag gtagcagcgg gcgagaggaagacgcggcct ccacgctagt gacgggctct gagtatgaga cgatgctgac ggagatcatgtccatgggct atgagcgaga gcgggtcgtg gccgccctga gagccagcta caacaacccccaccgagccg tggagtatct gctcacggga attcctggga gccccgagcc ggaacacggttctgtccagg agagccaggt atcggagcag ccggccacgg aagcagcagg agagaaccccctggagttcc tgcgggacca gccccagttc cagaacatgc ggcaggtgat tcagcagaaccctgcgctgc tgcccgccct gctccagcag ctgggccagg agaaccctca gcttttacagcaaatcagcc ggcaccagga gcagttcatc cagatgctga acgagccccc tggggagctggcggacatct cagatgtgga gggggaggtg ggcgccatag gagaggaggc cccgcagatgaactacatcc aggtgacgcc gcaggagaaa gaagctatag agaggttgaa ggccctgggcttcccagaga gcctggtcat ccaggcctat ttcgcgtgtg aaaaaaatga gaacttggctgccaacttcc tcctgagtca gaactttgat gacgagtgat gccaggaagc caggccaccgaagcccccac cctaccctta ttccatgaaa gttttataaa agaaaaaata tatatatattcatgtttatt taagaaatgg aaaaaaaaat caaaaatctt aaaaaaacaa gcaaacagtccagcttcctg tcctcctaaa gtggcccctg ttcccatctc ccgggccaga cagctgtccccccgtcctcc tccccagccc agcctgctca gagaagctgg caggactggg aggcgacagatgggcccctc ttggcctctg tcccagctct ctgcagccag acggaaaggc ggctgcttgcctctccatcc tccgaaaaac ccctgaggac ccccccccat cctcttctag gatgaggggaagctggagcc ccaactttga tcctccattg gagtggccca aatctttcca tctagggcaagtcctgaaag gcccaaggcc ccctccccag tctggccttg gcctccagcc tggagaagggctaacatcag ctcattgtca aggccacccc caccccagaa cagaaccgtg tctctgataaaggttttgaa gtgaataaag ttttaaaaac ta"
++print(seq)
++print(seq.upper)
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/inspectionProfiles/profiles_settings.xml	(date 1603113432812)
++++ .idea/inspectionProfiles/profiles_settings.xml	(date 1603113432812)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/PrimerFinder.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/PrimerFinder.iml	(date 1603113432786)
++++ .idea/PrimerFinder.iml	(date 1603113432786)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1603113432792)
++++ .idea/vcs.xml	(date 1603113432792)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1603113432806)
++++ .idea/modules.xml	(date 1603113432806)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/PrimerFinder.iml" filepath="$PROJECT_DIR$/.idea/PrimerFinder.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
