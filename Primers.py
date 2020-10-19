@@ -33,3 +33,11 @@ print('How many nucleotides should the primer be?')
 length = input()
 
 print(seq + ' ' + length)
+
+#for i in range(len(data1)):
+    #if data1[i] == data2[i]:
+        #count += 1
+#print(count/len(data1)*100)
+
+#percentage = 100*(sum([1 for [x,y] in zip(data1,data2) if x == y])/len(data1))
+#print('the two sequences are',round(percentage,2),' % the same')
