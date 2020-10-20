@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed2c900a-fda7-42d2-ae6e-aed6976df26a" name="Default Changelist" comment="test1">
-      <change beforePath="$PROJECT_DIR$/.idea/PrimerFinder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PrimerFinder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_17__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_17__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_35__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_35__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="ed2c900a-fda7-42d2-ae6e-aed6976df26a" name="Default Changelist" comment="Functional GC% calculation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Primers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Primers.py" afterDir="false" />
     </list>
@@ -105,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603153492707</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Functional GC% calculation">
+      <created>1603199691090</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603199691090</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Functional GC% calculation">
+      <created>1603199743865</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603199743865</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,33 +133,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test1" />
+    <MESSAGE value="Functional GC% calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functional GC% calculation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="669" y="115" key="#Primers" timestamp="1603114268544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="115" key="#Primers/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603114268544" />
-    <state width="1899" height="258" key="GridCell.Tab.0.bottom" timestamp="1603199616366">
+    <state width="1899" height="309" key="GridCell.Tab.0.bottom" timestamp="1603200737856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="224" key="GridCell.Tab.0.bottom/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603153443249" />
-    <state width="1899" height="258" key="GridCell.Tab.0.bottom/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603199616366" />
-    <state width="1899" height="258" key="GridCell.Tab.0.center" timestamp="1603199616366">
+    <state width="1899" height="309" key="GridCell.Tab.0.bottom/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603200737856" />
+    <state width="1899" height="309" key="GridCell.Tab.0.center" timestamp="1603200737856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="224" key="GridCell.Tab.0.center/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603153443249" />
-    <state width="1899" height="258" key="GridCell.Tab.0.center/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603199616366" />
-    <state width="1899" height="258" key="GridCell.Tab.0.left" timestamp="1603199616366">
+    <state width="1899" height="309" key="GridCell.Tab.0.center/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603200737856" />
+    <state width="1899" height="309" key="GridCell.Tab.0.left" timestamp="1603200737856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="224" key="GridCell.Tab.0.left/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603153443248" />
-    <state width="1899" height="258" key="GridCell.Tab.0.left/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603199616366" />
-    <state width="1899" height="258" key="GridCell.Tab.0.right" timestamp="1603199616366">
+    <state width="1899" height="309" key="GridCell.Tab.0.left/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603200737856" />
+    <state width="1899" height="309" key="GridCell.Tab.0.right" timestamp="1603200737856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="224" key="GridCell.Tab.0.right/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603153443249" />
-    <state width="1899" height="258" key="GridCell.Tab.0.right/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603199616366" />
+    <state width="1899" height="309" key="GridCell.Tab.0.right/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603200737856" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603196555713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

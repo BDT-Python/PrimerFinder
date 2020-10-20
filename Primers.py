@@ -31,7 +31,8 @@ for i in range(len(noSpace)):
                 else:
                     z = z + 1
         percentage = 100 / (AT + GC) * GC
-        print("Primer sequence\n" + primer + "\nLength: " + str(len(primer)) + "\nAT: " + str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage) + "\n--------------------------")
+        print("Primer sequence\n" + primer + "\nLength: " + str((len(primer))) + "\nAT: " + str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage) + "\n--------------------------")
+
     GC = 0
     AT = 0
     x = x + 1
