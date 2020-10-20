@@ -9,13 +9,15 @@ y = 10
 z = 0
 AT = 0
 GC = 0
+primerLength = 10
 
 # starts at x0 - y10 in noSpace, and adds 1 to x and y every loop, breaking it into chunks of 10.
 for i in range(len(noSpace)):
     # defines variable "primer" length (by default: 10)
     primer = noSpace[x:y]
-#    print("Primer sequence\n" + primer + "\n\n AT count\n" + str(AT) + "\n\n GC Count\n" + str(GC) +"\n --------------------------")
-    if len(primer) >= 10:
+
+    # only extracts primer if length =>
+    if len(primer) >= primerLength:
 
         for j in range(len(primer)):
             if primer[z] == "a" or primer[z] == "t":
@@ -30,8 +32,8 @@ for i in range(len(noSpace)):
                     z = 0
                 else:
                     z = z + 1
-        percentage = 100 / (AT + GC) * GC
-        print("Primer sequence\n" + primer + "\nLength: " + str((len(primer))) + "\nAT: " + str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage) + "\n--------------------------")
+        percentage = 100 / primerLength * GC
+        print("Primer sequence\n" + primer + "\nLength: " + str(primerLength) + "\nAT: " + str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage) + "\n--------------------------")
 
     GC = 0
     AT = 0
