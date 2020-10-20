@@ -20,7 +20,7 @@ for i in range(seq_len):
         tm = AT * 2 + GC * 4
         percentage = 100 / j * GC
         if percentage > 39 or percentage < 61 and tm > 64 or tm < 76:
-                        print(tm)
-                        print(primer)
-                        print(round(percentage,2))
+            print(tm)
+            print(primer)
+            print(round(percentage,2))
 
