@@ -22,16 +22,14 @@ for i in range(len(noSpace)):
         for j in range(len(primer)):
             if primer[z] == "a" or primer[z] == "t":
                 AT = AT + 1
-                if z == 9:
-                    z = 0
-                else:
-                    z = z + 1
             else:
                 GC = GC + 1
-                if z == 9:
-                    z = 0
-                else:
-                    z = z + 1
+
+            if z == 9:
+                z = 0
+            else:
+                z = z + 1
+
         percentage = 100 / primerLength * GC
         print("Primer sequence\n" + primer + "\nLength: " + str(primerLength) + "\nAT: " + str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage) + "\n--------------------------")
 
