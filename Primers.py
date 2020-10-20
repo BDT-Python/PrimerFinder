@@ -3,13 +3,16 @@ rawSequence = "gcggcgcgcc tgggcgctaa gatggcggcg gcgtgagttg catgttgtgt gaggatcccg
 lowerSequence = rawSequence.lower()
 noSpace = lowerSequence.replace(" ", "")
 
+# asks for desired primer length and saves user input to primerLength as an integer.
+primerLength = int(input("How long should the primer be? (Recommended length is at least 18bp ... "))
+
 # defines counters used to loop chunks
 x = 0
-y = 10
+y = primerLength
 z = 0
 AT = 0
 GC = 0
-primerLength = 10
+
 
 # starts at x0 - y10 in noSpace, and adds 1 to x and y every loop, breaking it into chunks of 10.
 for i in range(len(noSpace)):
