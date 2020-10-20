@@ -14,24 +14,26 @@ GC = 0
 for i in range(len(noSpace)):
     # defines variable "primer" length (by default: 10)
     primer = noSpace[x:y]
+#    print("Primer sequence\n" + primer + "\n\n AT count\n" + str(AT) + "\n\n GC Count\n" + str(GC) +"\n --------------------------")
+    if len(primer) >= 10:
 
-    for j in range(len(primer)):
-        if len(primer) < 10:
-            break
-        else:
-            if primer[z] == "a" or "t":
+        for j in range(len(primer)):
+            if primer[z] == "a" or primer[z] == "t":
                 AT = AT + 1
-            elif primer[z] == "g" or "c":
-                GC = GC + 1
-
-            print(primer[z])
-
-            if z == 9:
-                z = 0
+                if z == 9:
+                    z = 0
+                else:
+                    z = z + 1
             else:
-                z = z + 1
-
-    print("Primer sequence\n" + primer + "\n\n AT count\n" + str(AT) + "\n\n GC Count\n" + str(GC) +"\n --------------------------")
+                GC = GC + 1
+                if z == 9:
+                    z = 0
+                else:
+                    z = z + 1
+        percentage = 100 / (AT + GC) * GC
+        print("Primer sequence\n" + primer + "\nLength: " + str(len(primer)) + "\nAT: " + str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage) + "\n--------------------------")
+    GC = 0
+    AT = 0
     x = x + 1
     y = y + 1
 
@@ -42,3 +44,4 @@ for i in range(len(noSpace)):
 
 #percentage = 100*(sum([1 for [x,y] in zip(data1,data2) if x == y])/len(data1))
 #print('the two sequences are',round(percentage,2),' % the same')
+
