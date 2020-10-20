@@ -31,7 +31,15 @@ for i in range(len(noSpace)):
                 z = z + 1
 
         percentage = 100 / primerLength * GC
-        print("Primer sequence\n" + primer + "\nLength: " + str(primerLength) + "\nAT: " + str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage) + "\n--------------------------")
+
+        if primerLength > 13:
+            tm = 64.9 + 41 * (GC - 16.4) / (AT + GC)
+        else:
+            tm = AT * 2 + GC * 4
+
+        print("Primer sequence\n" + primer + "\nLength: " + str(primerLength))
+        print("AT: "+ str(AT) + " GC: " + str(GC) + "\n" + "GC% = " + str(percentage))
+        print("Tm: " + str(tm) + "\n--------------------------")
 
     GC = 0
     AT = 0
