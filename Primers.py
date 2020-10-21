@@ -24,4 +24,4 @@ for i in range(seq_len):
             print("Primer length: " + str(len(primer)))
             print("Tm: " + str(round(tm, 1)) + "°C")
             print("GC%: " + str(round(percentage, 1)))
-            print("----------------------------")
+            print("-----------------------------")
