@@ -3,12 +3,13 @@ rawSequence = "gcggcgcgcc tgggcgctaa gatggcggcg gcgtgagttg catgttgtgt gaggatcccg
 lowerSequence = rawSequence.lower()
 noSpace = rawSequence.replace(" ", "")
 
+nucleotideCounter = 0
 primer_min_len = 18
 primer_max_len = 30
 seq_len = len(noSpace)
 
 for i in range(seq_len):
-
+    nucleotideCounter += 1
     for j in range(primer_min_len, primer_max_len + 1):
 
         if i + j > seq_len:
@@ -16,12 +17,15 @@ for i in range(seq_len):
 
         primer = noSpace[i:i + j]
         AT = sum([1 for x in primer if x in ['a', 't']])
+
         GC = j - AT
         tm = 64.9 + 41 * (GC - 16.4) / (AT + GC)
         percentage = 100 / j * GC
         if 40 <= percentage <= 60 and 50 <= tm <= 60:
             print("Primer sequence: " + primer)
             print("Primer length: " + str(len(primer)))
-            print("Tm: " + str(round(tm, 1)) + "°C")
+            print("\nBegin: " + str(nucleotideCounter))
+            print("End: " + str(nucleotideCounter + (len(primer))))
+            print("\nTm: " + str(round(tm, 1)) + "°C")
             print("GC%: " + str(round(percentage, 1)))
             print("-----------------------------")
