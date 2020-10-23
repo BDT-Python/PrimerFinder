@@ -4,13 +4,12 @@ lowerSequence = rawSequence.lower()
 noSpace = rawSequence.replace(" ", "")
 
 nucleotideCounter = 0
-primer_min_len = 18
-primer_max_len = 30
+primer_min_len = 15
+primer_max_len = 19
 seq_len = len(noSpace)
 
 # Defines primer_dict as a list to hold libraries with potential primer information.
 primer_dict = []
-
 for i in range(seq_len):
     # Counts at which nucleotide the printed primer starts
     nucleotideCounter += 1
@@ -20,7 +19,7 @@ for i in range(seq_len):
             break
 
         primerSeq = noSpace[i:i + j]
-        AT = sum([1 for x in primerSeq if x in ['a', 't']]) # Counts and calculates AT and GC%
+        AT = sum([1 for x in primerSeq if x in ['a', 't']])  # Counts and calculates AT and GC%
         GC = j - AT
 
         # Calculates melting temperature according Marmur and Doty, 1962:
@@ -30,19 +29,27 @@ for i in range(seq_len):
 
         # Filters all sequence bites and filters them, then appends to, and stores them in the primer_dict dictionary.
         if 40 <= percentage <= 60 and 50 <= tm <= 60:
-            d = {"Begin": nucleotideCounter,
+            d = {"Begin": nucleotideCounter,                # Creates dictionary 'd' with primer information
                  "End": nucleotideCounter + len(primerSeq),
                  "Length:": len(primerSeq),
                  "Sequence:": primerSeq,
                  "GC%": percentage,
                  "Tm": tm}
-            primer_dict.append(d)
-
-#def product_length:                 # function for fetching primers for desired length
-#    for primer in primer_dict:      # Searching through every primer stored in dictionary
-
+            primer_dict.append(d)                           # Appends and stores each primer dictionary in the list
 
 print(primer_dict)
+
+
+def make_reverse(toReverse):               # Function to fetch the reverse compliment of the reverse primer.
+    normal = "acgt"
+    compliment = "tgca"
+    reversePrimer = str.maketrans(normal, compliment)
+    print(toReverse.translate(reversePrimer)[::-1])
+    return
+
+
+make_reverse(noSpace)  # Demonstration of the make_reverse function in use. Prints reverse compliment of the entire sequence.
+
 
 # We have every single suitable primer saved into primer_dict.
 # Now the following tasks remain:
@@ -51,7 +58,7 @@ print(primer_dict)
 #      This should be relatively easy, considering the primer start/end nt are saved in primer_dict.
 #        https://medium.com/@rob3hr/searching-through-a-list-of-dictionaries-in-python-618fe77b2799
 #
-#   2. Make the reverse primer reverse complimentary. Also easy enough, turn A into T, G into C.
-#
-#   3. Check for self-annealing. This one's a bit more tricky but I'm sure we'll figure it out
-#
+#   2. Check for self-annealing. This one's a bit more tricky but I'm sure we'll figure it out
+#       Maybe, we can get it to superimpose the primers form every possible position and
+#       add a +1 for every base that can connect and set a cutoff value.
+#       (i.e. if score = 6 (6 bases pair) at any position, the primer is considered self-annealing.
