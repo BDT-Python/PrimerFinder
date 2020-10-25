@@ -33,11 +33,26 @@ for i in range(seq_len):
                  "End": nucleotideCounter + len(primerSeq),
                  "Length:": len(primerSeq),
                  "Sequence:": primerSeq,
-                 "GC%": percentage,
-                 "Tm": tm}
+                 "GC%": (round(percentage,2)),
+                 "Tm": (round(tm,1)),}
             primer_dict.append(d)                           # Appends and stores each primer dictionary in the list
 
-print(primer_dict)
+# Finding the primer pairs in the primer dictionary (a reverse that matches the forward) which creates a product of minimum 30nt and has a Tm difference of 5 or less 
+min_distance = 30
+pairs = []
+for i in range(len(primer_dict)):
+    options = []
+    for x in range(i,(len(primer_dict))):
+        if abs(primer_dict[i]["Tm"] - primer_dict[x]["Tm"]) <= 5:
+            if primer_dict[x]["Begin"] - primer_dict[i]["End"] >= min_distance:
+                options.append(primer_dict[x])
+    if options:
+        pairs.append([primer_dict[i],options])
+                
+
+        
+
+#print(primer_dict)
 
 
 def make_reverse(toReverse):               # Function to fetch the reverse compliment of the reverse primer.
