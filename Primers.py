@@ -4,11 +4,22 @@ lowerSequence = rawSequence.lower()
 noSpace = rawSequence.replace(" ", "")
 
 nucleotideCounter = 0
-primer_min_len = 15
-primer_max_len = 19
+primer_min_len = 28
+primer_max_len = 30
 seq_len = len(noSpace)
 
 
+def make_reverse(toReverse):               # Function to fetch the reverse compliment of the reverse primer.
+    normal = "acgt"
+    compliment = "tgca"
+    reversePrimer = str.maketrans(normal, compliment)
+    # print("toReverse: " + toReverse)
+    # print("Original primer_dict[x]: " + primer_dict[x]["Sequence:"])
+    tmp = toReverse.translate(reversePrimer)[::-1]
+    return tmp
+    # print("Revcomp primer_dict[x]: " + primer_dict[x]["Sequence:"])
+    # print("-----------------------------------------")
+    # return
 
 
 
@@ -41,28 +52,32 @@ for i in range(seq_len):
                  "Tm": (round(tm, 1)), }
             primer_dict.append(d)                           # Appends and stores each primer dictionary in the list
 
+
 # Finding the primer pairs in the primer dictionary (a reverse that matches the forward) which creates a product of minimum 30nt and has a Tm difference of 5 or less 
-min_distance = 30
+min_distance = 100
 pairs = []
+cnt = 0
 
+f = open("output.txt", "w")     # Opens output file
+i = 0
+for primer1 in primer_dict:
+    for primer2 in primer_dict[i:]:
+        if abs( primer1["Tm"] - primer2["Tm"]) <= 5:
+            if primer2["Begin"] - primer1["End"] >= min_distance:
+                temp = primer2
+                temp["Sequence:"] = make_reverse(temp["Sequence:"])
+                f.write("Pair #: " + str(cnt) + "\n")
+                f.write("Forward Primer: " + str(primer1) + "\n")
+                f.write("Reverse Primer: " + str(temp) + "\n")
+                f.write("Product Length: " + str(primer2["End"] - primer1["Begin"]) + "\n")
+                f.write("\n")
+                pairs.append([primer1, primer2])
+                cnt = cnt + 1                       # Counts valid pairs
+    i = i+1
 
-def make_reverse(toReverse):               # Function to fetch the reverse compliment of the reverse primer.
-    normal = "acgt"
-    compliment = "tgca"
-    reversePrimer = str.maketrans(normal, compliment)
-    primer_dict[x]["Sequence:"] = toReverse.translate(reversePrimer)[::-1]
-    return
+f.close()                       # Closes output file
 
+num = 0
 
-for i in range(len(primer_dict)):
-    options = []
-    for x in range(i, (len(primer_dict))):
-        if abs(primer_dict[i]["Tm"] - primer_dict[x]["Tm"]) <= 5:
-            if primer_dict[x]["Begin"] - primer_dict[i]["End"] >= min_distance:
-                make_reverse(primer_dict[x]["Sequence:"])
-                options.append(primer_dict[x])
-    if options:
-        pairs.append([primer_dict[i], options])
-
-print(pairs)
-
+print("Potential Primers: " + str(len(primer_dict)))
+print("Valid Pairs:" + str(cnt))
