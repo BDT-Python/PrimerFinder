@@ -25,7 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed2c900a-fda7-42d2-ae6e-aed6976df26a" name="Default Changelist" comment="Now stores each primer in a list of dictionaries.">
+    <list default="true" id="ed2c900a-fda7-42d2-ae6e-aed6976df26a" name="Default Changelist" comment="Now has a make_reverse function to make a reverse complimentary reverse primer.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_17_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_17__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_35_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_15_35__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Primers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Primers.py" afterDir="false" />
     </list>
@@ -54,7 +58,7 @@
       <recent name="C:\Users\sean\PycharmProjects\PrimerFinder" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Primers">
     <configuration name="Primers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PrimerFinder" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,9 +80,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="PrimersBackup21" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PrimerFinder" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PrimersBackup21.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Primers" />
+        <item itemvalue="Python.PrimersBackup21" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603315601725</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Now has a make_reverse function to make a reverse complimentary reverse primer.">
+      <created>1603414188136</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1603414188136</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,42 +284,63 @@
     <MESSAGE value="Functional GC% &amp; Tm filtering, improved Tm calculations" />
     <MESSAGE value="Functional GC% &amp; Tm filtering, improved Tm calculations and indicates location" />
     <MESSAGE value="Now stores each primer in a list of dictionaries." />
-    <option name="LAST_COMMIT_MESSAGE" value="Now stores each primer in a list of dictionaries." />
+    <MESSAGE value="Now has a make_reverse function to make a reverse complimentary reverse primer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now has a make_reverse function to make a reverse complimentary reverse primer." />
   </component>
   <component name="WindowStateProjectService">
     <state x="669" y="115" key="#Primers" timestamp="1603114268544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="115" key="#Primers/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603114268544" />
-    <state width="1899" height="222" key="GridCell.Tab.0.bottom" timestamp="1603413817818">
+    <state width="1899" height="173" key="GridCell.Tab.0.bottom" timestamp="1603728404964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="181" key="GridCell.Tab.0.bottom/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603391228419" />
-    <state width="1899" height="222" key="GridCell.Tab.0.bottom/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603413817818" />
-    <state width="1899" height="222" key="GridCell.Tab.0.center" timestamp="1603413817818">
+    <state width="1899" height="259" key="GridCell.Tab.0.bottom/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603679828689" />
+    <state width="1899" height="173" key="GridCell.Tab.0.bottom/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603728404964" />
+    <state width="1899" height="173" key="GridCell.Tab.0.center" timestamp="1603728404964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="181" key="GridCell.Tab.0.center/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603391228419" />
-    <state width="1899" height="222" key="GridCell.Tab.0.center/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603413817818" />
-    <state width="1899" height="222" key="GridCell.Tab.0.left" timestamp="1603413817818">
+    <state width="1899" height="259" key="GridCell.Tab.0.center/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603679828689" />
+    <state width="1899" height="173" key="GridCell.Tab.0.center/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603728404964" />
+    <state width="1899" height="173" key="GridCell.Tab.0.left" timestamp="1603728404964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="181" key="GridCell.Tab.0.left/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603391228419" />
-    <state width="1899" height="222" key="GridCell.Tab.0.left/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603413817818" />
-    <state width="1899" height="222" key="GridCell.Tab.0.right" timestamp="1603413817818">
+    <state width="1899" height="259" key="GridCell.Tab.0.left/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603679828689" />
+    <state width="1899" height="173" key="GridCell.Tab.0.left/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603728404964" />
+    <state width="1899" height="173" key="GridCell.Tab.0.right" timestamp="1603728404964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="181" key="GridCell.Tab.0.right/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603391228419" />
-    <state width="1899" height="222" key="GridCell.Tab.0.right/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603413817818" />
-    <state x="-1368" y="323" key="Vcs.Push.Dialog.v2" timestamp="1603315606619">
-      <screen x="-1920" y="84" width="1920" height="1040" />
+    <state width="1899" height="259" key="GridCell.Tab.0.right/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603679828689" />
+    <state width="1899" height="173" key="GridCell.Tab.0.right/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603728404964" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1603726574345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603726574345" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1603726574345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.center/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603726574345" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1603726574345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.left/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603726574345" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1603726574345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.right/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603726574345" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1603414192647">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="323" key="Vcs.Push.Dialog.v2/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603315606619" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603240540403" />
-    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603201978177">
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603414192647" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1603679733280">
+      <screen x="-1920" y="84" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603679733280" />
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603724280618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1151" y="517" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.84.1920.1040/0.0.1920.1040@-1920.84.1920.1040" timestamp="1603113430284" />
-    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603201978177" />
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.84.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603724280618" />
   </component>
 </project>
